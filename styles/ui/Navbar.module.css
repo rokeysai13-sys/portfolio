@@ -251,3 +251,9 @@
 .musicActive .bar2 { animation: barBounce2 0.6s ease-in-out infinite 0.1s; transform-origin: bottom; }
 .musicActive .bar3 { animation: barBounce3 0.8s ease-in-out infinite 0.05s; transform-origin: bottom; }
 .musicActive .bar4 { animation: barBounce4 0.5s ease-in-out infinite 0.15s; transform-origin: bottom; }
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}

@@ -158,42 +158,44 @@ export default function Navbar() {
           </ul>
         </nav>
 
-        <a
-          href={`mailto:${profile.email}`}
-          className={styles.emailBtn}
-        >
-          Email me
-        </a>
+        <div className={styles.headerRight}>
+          <a
+            href={`mailto:${profile.email}`}
+            className={styles.emailBtn}
+          >
+            Email me
+          </a>
 
-        {/* BG Music toggle button */}
-        <button
-          className={`${styles.musicBtn} ${musicPlaying ? styles.musicActive : ''}`}
-          onClick={toggleMusic}
-          aria-label={musicPlaying ? 'Pause background music' : 'Play background music'}
-          title={musicPlaying ? 'Pause music' : 'Play music'}
-        >
-          {musicPlaying ? <MusicPlayingIcon /> : <MusicOffIcon />}
-          <span>{musicPlaying ? 'PLAYING' : '♪ MUSIC'}</span>
-        </button>
+          {/* BG Music toggle button */}
+          <button
+            className={`${styles.musicBtn} ${musicPlaying ? styles.musicActive : ''}`}
+            onClick={toggleMusic}
+            aria-label={musicPlaying ? 'Pause background music' : 'Play background music'}
+            title={musicPlaying ? 'Pause music' : 'Play music'}
+          >
+            {musicPlaying ? <MusicPlayingIcon /> : <MusicOffIcon />}
+            <span>{musicPlaying ? 'PLAYING' : '♪ MUSIC'}</span>
+          </button>
 
-        <button
-          className={styles.hamburger}
-          onClick={() => setMenuOpen(o => !o)}
-          aria-label="Toggle menu"
-        >
-          {menuOpen ? (
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
-              <line x1="18" y1="6" x2="6" y2="18" />
-              <line x1="6" y1="6" x2="18" y2="18" />
-            </svg>
-          ) : (
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
-              <line x1="3" y1="12" x2="21" y2="12" />
-              <line x1="3" y1="6" x2="21" y2="6" />
-              <line x1="3" y1="18" x2="21" y2="18" />
-            </svg>
-          )}
-        </button>
+          <button
+            className={styles.hamburger}
+            onClick={() => setMenuOpen(o => !o)}
+            aria-label="Toggle menu"
+          >
+            {menuOpen ? (
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            ) : (
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+                <line x1="3" y1="12" x2="21" y2="12" />
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <line x1="3" y1="18" x2="21" y2="18" />
+              </svg>
+            )}
+          </button>
+        </div>
       </header>
 
       {menuOpen && (

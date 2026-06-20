@@ -99,13 +99,13 @@
 .content {
   position: absolute;
   left: 4rem;
-  top: 15vh;
+  top: 11vh;
   z-index: 3;
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: clamp(1rem, 2.8vh, 2.2rem);
   cursor: default;
-  --hero-name-size: clamp(4rem, 8vw, 9rem);
+  --hero-name-size: clamp(3rem, 7vw, 7.5rem);
 }
 
 .greeting {
