@@ -95,16 +95,3 @@ The codebase included in this repository compiles my **Cinematic Developer Portf
 > *   **Conditional Rendering**: WebGL rendering is gated to only execute when active video transitions are taking place.
 > *   **GSAP Scroll Throttling**: Cached progress flags block layout recalculations during rapid scrolling.
 
-### Local Installation
-1.  **Install dependencies**:
-    ```bash
-    npm install
-    ```
-2.  **Run Dev server**:
-    ```bash
-    npm run dev
-    ```
-3.  **Compile production bundle**:
-    ```bash
-    npm run build
-    ```
