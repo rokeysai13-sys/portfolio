@@ -1,0 +1,253 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3rem;
+  color: var(--navbar-text);
+  transition: padding 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.time {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: opacity 0.35s ease;
+}
+
+.navMenu {
+  transition: opacity 0.35s ease;
+}
+
+.navLinks {
+  display: flex;
+  gap: 1.75rem;
+  list-style: none;
+  align-items: center;
+}
+
+.navLink {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: var(--navbar-text);
+  transition: opacity 0.25s, color 0.25s;
+}
+
+.navLink:hover {
+  opacity: 0.65;
+}
+
+.emailBtn {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: var(--navbar-text);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  min-height: 36px;
+  transition: color 0.35s ease, border-color 0.35s ease;
+}
+
+.emailBtn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.35s ease;
+  z-index: -1;
+}
+
+.emailBtn:hover {
+  color: #000;
+  border-color: var(--accent);
+}
+
+.emailBtn:hover::after {
+  transform: scaleX(1);
+}
+
+/* ── Dark section mode (Projects and onwards) ────── */
+.darkMode {
+  --navbar-text: rgba(255, 255, 255, 0.88);
+}
+
+.darkMode .emailBtn {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* ── VideoIntro mode: hide time + nav, keep email only ── */
+.introMode {
+  --navbar-text: rgba(255, 255, 255, 0.75);
+}
+
+.introMode .emailBtn {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.introMode .time {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.introMode .navMenu {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 767px) {
+  .header {
+    padding: 1rem 1.5rem;
+  }
+  .time {
+    display: none;
+  }
+  .navMenu {
+    display: none;
+  }
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--navbar-text);
+  padding: 0.25rem;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.25s ease;
+}
+
+@media (max-width: 767px) {
+  .hamburger {
+    display: flex;
+  }
+  .emailBtn {
+    display: none;
+  }
+}
+
+.mobileMenu {
+  position: fixed;
+  inset: 0;
+  background: rgba(8, 8, 8, 0.98);
+  z-index: 95;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.2rem;
+}
+
+.mobileNavLink {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.mobileNavLink:hover {
+  color: var(--accent);
+}
+
+.mobileMailLink {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.35);
+  text-decoration: none;
+  margin-top: 1rem;
+  letter-spacing: 0.08em;
+  transition: color 0.2s;
+}
+
+.mobileMailLink:hover {
+  color: var(--accent);
+}
+
+/* ── Music Toggle Button ──────────────────────────────── */
+.musicBtn {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  border-radius: 9999px;
+  height: 36px;
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  color: var(--navbar-text);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+  flex-shrink: 0;
+}
+
+.musicBtn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.musicActive {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #000 !important;
+}
+
+.musicActive:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+/* ── Animated equalizer bars ─── */
+@keyframes barBounce1 {
+  0%, 100% { transform: scaleY(0.5); }
+  50%       { transform: scaleY(1.0); }
+}
+@keyframes barBounce2 {
+  0%, 100% { transform: scaleY(1.0); }
+  50%       { transform: scaleY(0.4); }
+}
+@keyframes barBounce3 {
+  0%, 100% { transform: scaleY(0.7); }
+  50%       { transform: scaleY(1.0); }
+}
+@keyframes barBounce4 {
+  0%, 100% { transform: scaleY(0.3); }
+  50%       { transform: scaleY(0.9); }
+}
+
+.musicActive .bar1 { animation: barBounce1 0.7s ease-in-out infinite; transform-origin: bottom; }
+.musicActive .bar2 { animation: barBounce2 0.6s ease-in-out infinite 0.1s; transform-origin: bottom; }
+.musicActive .bar3 { animation: barBounce3 0.8s ease-in-out infinite 0.05s; transform-origin: bottom; }
+.musicActive .bar4 { animation: barBounce4 0.5s ease-in-out infinite 0.15s; transform-origin: bottom; }

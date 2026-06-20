@@ -1,0 +1,38 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# Large assets or reference docs in root
+/ByAstral_-_YOU_CAN_ASK_THE_FLOWERSYOU_CAN_ASK_THE_FLOWERS_HORROR_MIX_Slowed_(mp3.pm).mp3
+/Video Project 2.mp4
+/Website_Full_Content_Transcript.docx

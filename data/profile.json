@@ -1,0 +1,171 @@
+{
+  "name": {
+    "first": "Sai Kiran",
+    "last": "Putta V.V.",
+    "full": "Sai Kiran Putta V.V."
+  },
+  "email": "rokeysai13@gmail.com",
+  "tagline": "AI THAT THINKS. CODE THAT SHIPS.",
+  "description": "AI Engineer & Machine Learning Student passionate about building intelligent applications, autonomous agent systems, and RAG architectures.",
+  "roles": {
+    "short": "AI Engineer",
+    "detailed": "AI Engineer • Machine Learning Student • Full Stack Developer"
+  },
+  "location": {
+    "based": "India",
+    "availability": "India / Remote"
+  },
+  "available": true,
+  "bio": "I'm a Computer Science & Machine Learning student at NSRIT, passionate about Artificial Intelligence, Machine Learning, Agentic AI Systems, and Full-Stack Development. I enjoy building intelligent applications, autonomous AI agents, RAG systems, and modern web experiences that solve real-world problems.",
+  "stats": [
+    { "value": "5+", "label": "AI Projects" },
+    { "value": "3+", "label": "Open Source Roles" },
+    { "value": "10+", "label": "Technologies" }
+  ],
+  "skills": [
+    "Agentic AI",
+    "RAG Systems",
+    "LangChain",
+    "Vector Databases",
+    "Ollama",
+    "FastAPI",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Python",
+    "Docker",
+    "OpenAI API",
+    "Hugging Face",
+    "PostgreSQL",
+    "Redis",
+    "GitHub",
+    "Code Review",
+    "Documentation"
+  ],
+  "experience": [
+    {
+      "id": 1,
+      "role": "AI & Full Stack Developer",
+      "company": "Personal Projects",
+      "companyShort": "PERSONAL PROJECTS",
+      "type": "Personal",
+      "location": "India",
+      "period": "2025",
+      "periodEnd": "Present",
+      "bullets": [
+        "Building AI-powered applications, RAG systems, multi-agent architectures, and full-stack web platforms using Python, FastAPI, React, and modern AI frameworks.",
+        "Developing intelligent tools and autonomous agent workflows to automate repetitive tasks and solve complex reasoning problems.",
+        "Integrating vector databases (Chroma, PGVector) with embedding models for efficient semantic search and knowledge retrieval.",
+        "Designing and styling responsive web frontends with clean modern aesthetics, glassmorphism, and performance optimization."
+      ],
+      "desc": "Building AI applications, RAG pipelines, agentic workflows, and full-stack platforms.",
+      "tech": ["Python", "FastAPI", "React", "LangChain", "RAG", "OpenAI", "TypeScript", "Next.js"]
+    },
+    {
+      "id": 2,
+      "role": "Open Source Contributor",
+      "company": "GitHub Projects",
+      "companyShort": "OPEN SOURCE",
+      "type": "Open Source",
+      "location": "Remote",
+      "period": "2025",
+      "periodEnd": "Present",
+      "bullets": [
+        "Contributing to open-source AI and machine learning repositories on GitHub, maintaining high code quality and test coverage.",
+        "Collaborating with global developers to resolve bugs, implement features, and improve project documentation.",
+        "Reviewing pull requests and code modifications, validating alignment with project best practices."
+      ],
+      "desc": "Contributing to open-source repositories and collaborating on AI/ML and software engineering projects.",
+      "tech": ["Git", "Python", "TypeScript", "Code Review", "Documentation", "GitHub"]
+    },
+    {
+      "id": 3,
+      "role": "AI Research & Learning",
+      "company": "Independent Research",
+      "companyShort": "AI RESEARCH",
+      "type": "Research",
+      "location": "India",
+      "period": "2024",
+      "periodEnd": "Present",
+      "bullets": [
+        "Exploring LLM fine-tuning, retrieval techniques, agentic frameworks, and local LLM deployment using Ollama and open-source models.",
+        "Researching multi-agent debate protocols, autonomous reasoning paths, and evaluation frameworks for AI system safety.",
+        "Studying machine learning architectures, neural networks, computer vision, and predictive model training."
+      ],
+      "desc": "Independent research into LLMs, Vector Databases, RAG, Ollama, and Machine Learning algorithms.",
+      "tech": ["LLMs", "Vector DB", "Ollama", "Embeddings", "Agents", "Machine Learning"]
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "Kirannn OS",
+      "subtitle": "Agentic AI Operating System",
+      "type": "Agentic AI",
+      "link": "https://github.com/rokeysai13-sys",
+      "image": "/assets/kirann os.jpg",
+      "tech": ["Python", "LangChain", "Agentic AI", "RAG", "Memory Systems", "FastAPI"],
+      "desc": "Next-generation agentic operating system combining AI agents, memory layers, custom toolsets, and autonomous workflows."
+    },
+    {
+      "id": 2,
+      "title": "ATS Resume Builder",
+      "subtitle": "Full Stack Resume Platform",
+      "type": "Full Stack",
+      "link": "https://github.com/rokeysai13-sys",
+      "image": "/assets/ATS RESUME BUILDER.jpg",
+      "tech": ["Next.js", "FastAPI", "OpenAI", "PDF Generation", "TypeScript", "React"],
+      "desc": "Intelligent resume platform with AI-driven content optimization, resume scoring, PDF export, and modern responsive design."
+    },
+    {
+      "id": 3,
+      "title": "AI Council",
+      "subtitle": "Multi-LLM Debate Platform",
+      "type": "Multi-LLM",
+      "link": "https://github.com/rokeysai13-sys",
+      "image": "/assets/ai council.jpg",
+      "tech": ["Python", "Multi-LLM", "LangChain", "Ollama", "Reasoning", "FastAPI"],
+      "desc": "A collaborative multi-model debate and reasoning platform that allows multiple LLMs to interact and solve complex problems."
+    }
+  ],
+  "publications": [
+    {
+      "id": 1,
+      "title": "Kirannn OS",
+      "platform": "GitHub",
+      "year": "2025",
+      "link": "https://github.com/rokeysai13-sys",
+      "desc": "Next-generation agentic operating system combining AI agents, memory layers, custom toolsets, and autonomous workflows."
+    },
+    {
+      "id": 2,
+      "title": "ATS Resume Builder",
+      "platform": "GitHub",
+      "year": "2025",
+      "link": "https://github.com/rokeysai13-sys",
+      "desc": "Intelligent resume platform with AI-driven content optimization, resume scoring, PDF export, and modern responsive design."
+    },
+    {
+      "id": 3,
+      "title": "AI Council Debate",
+      "platform": "GitHub",
+      "year": "2025",
+      "link": "https://github.com/rokeysai13-sys",
+      "desc": "A collaborative multi-model debate and reasoning platform that allows multiple LLMs to interact and solve complex problems."
+    },
+    {
+      "id": 4,
+      "title": "RAG & Agentic Research",
+      "platform": "Research",
+      "year": "2024",
+      "link": "https://github.com/rokeysai13-sys",
+      "desc": "Independent research into vector databases, local model deployments with Ollama, retrieval workflows, and AI safety."
+    }
+  ],
+  "socials": [
+    { "label": "GitHub",    "href": "https://github.com/rokeysai13-sys" },
+    { "label": "LinkedIn",  "href": "https://www.linkedin.com/in/sai-kiran-putta-v-v-421497310" },
+    { "label": "Instagram", "href": "https://www.linkedin.com/in/sai-kiran-putta-v-v-421497310" },
+    { "label": "YouTube",   "href": "https://github.com/rokeysai13-sys" }
+  ]
+}

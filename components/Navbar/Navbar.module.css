@@ -1,0 +1,106 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 0 2rem;
+  height: 52px;
+  background: rgba(10, 10, 10, 0.6);
+  -webkit-backdrop-filter: blur(16px) saturate(1.4);
+  backdrop-filter: blur(16px) saturate(1.4);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  transition: background 0.4s, border-color 0.4s, color 0.4s;
+}
+
+/* Light mode (over about section) */
+.nav.light {
+  background: rgba(250, 250, 245, 0.85);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  color: #0a0a0a;
+}
+
+/* Clock */
+.clock {
+  font-family: 'Inter', monospace;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: inherit;
+  opacity: 0.6;
+}
+
+.nav.light .clock { opacity: 0.5; color: #0a0a0a; }
+
+/* Links */
+.links {
+  display: flex;
+  list-style: none;
+  gap: 0.25rem;
+}
+
+.link {
+  background: none;
+  border: none;
+  padding: 0.3rem 0.65rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.55);
+  cursor: pointer;
+  transition: color 0.2s;
+  text-transform: uppercase;
+}
+
+.link:hover { color: #ffffff; }
+
+.nav.light .link { color: rgba(0,0,0,0.45); }
+.nav.light .link:hover { color: #0a0a0a; }
+
+/* Email CTA */
+.emailBtn {
+  justify-self: end;
+  padding: 0.4rem 1.1rem;
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 100px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  text-transform: uppercase;
+  transition: background 0.25s, border-color 0.25s, color 0.25s;
+  white-space: nowrap;
+}
+
+.emailBtn:hover {
+  background: #F97316;
+  border-color: #F97316;
+  color: #fff;
+}
+
+.nav.light .emailBtn {
+  border-color: rgba(0,0,0,0.25);
+  color: #0a0a0a;
+}
+
+.nav.light .emailBtn:hover {
+  background: #F97316;
+  border-color: #F97316;
+  color: #fff;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .nav {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 1.2rem;
+  }
+  .links { display: none; }
+  .clock { font-size: 0.55rem; }
+}
