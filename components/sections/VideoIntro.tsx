@@ -30,6 +30,7 @@ export default function VideoIntro() {
   const [playing, setPlaying] = useState(true);
   const [showHint, setShowHint] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [isPastIntro, setIsPastIntro] = useState(false);
 
   useEffect(() => {
     setIsMobile(window.matchMedia('(max-width: 767px)').matches);
@@ -202,6 +203,7 @@ export default function VideoIntro() {
   // Handle scroll events: pause intro video, play background music if not explicitly paused
   useEffect(() => {
     function handleScrollPast() {
+      setIsPastIntro(true);
       // Pause intro video
       const v = videoRef.current;
       if (v && !v.paused) {
@@ -229,14 +231,23 @@ export default function VideoIntro() {
       }
     }
 
+    function handleScrollAt() {
+      setIsPastIntro(false);
+    }
+
     window.addEventListener('scroll-past-intro', handleScrollPast);
+    window.addEventListener('scroll-at-intro', handleScrollAt);
     return () => {
       window.removeEventListener('scroll-past-intro', handleScrollPast);
+      window.removeEventListener('scroll-at-intro', handleScrollAt);
     };
   }, [muted]);
 
   return (
-    <section className={styles.section}>
+    <section
+      className={styles.section}
+      style={isPastIntro ? { pointerEvents: 'none', visibility: 'hidden' } : undefined}
+    >
       {/* Blurred background video */}
       <video
         ref={bgVideoRef}

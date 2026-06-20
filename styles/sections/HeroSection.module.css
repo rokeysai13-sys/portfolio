@@ -18,7 +18,7 @@
   position: absolute;
   right: -9%;
   bottom: 0;
-  height: 89vh;
+  height: 82vh; /* Constrain height to prevent overlapping navbar at smaller heights */
   width: 44%;
   z-index: 1;
   pointer-events: none;
@@ -152,10 +152,11 @@
 /* ─── Tag Pills ──────────────────────────────────────────── */
 .pills {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-items: center;
   gap: 0.6rem;
   margin-top: 0.4rem;
+  max-width: 42vw;
 }
 
 .pill {
@@ -169,16 +170,12 @@
   padding: 0.65rem 1.5rem;
   letter-spacing: 0.02em;
   white-space: nowrap;
-  flex: 1;
+  flex: unset;
   text-align: center;
 }
 
 .pillDot {
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: var(--accent);
-  flex-shrink: 0;
+  display: none;
 }
 
 /* ─── View Projects Button ───────────────────────────────── */
@@ -259,8 +256,8 @@
 .taglineCard,
 .availCard {
   background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
   border: 1px solid rgba(255, 255, 255, 0.85);
   border-radius: 1rem;
   padding: 1rem 1.2rem;
@@ -367,10 +364,11 @@
 
 /* ─── Responsive: Tablet 768–1023px ─────────────────────── */
 @media (min-width: 768px) and (max-width: 1023px) {
-  .content     { left: 3rem; top: 18vh; max-width: 40vw; --hero-name-size: clamp(3rem, 7vw, 6rem); }
+  .content     { left: 3rem; top: 18vh; max-width: 35vw; --hero-name-size: clamp(3rem, 7vw, 6rem); }
+  .pills       { max-width: 100%; }
   .photo {
     width: 50%;
-    height: 88%;
+    height: 80%; /* Reduced from 88% to prevent overlap with header */
     right: -2%;
     bottom: 0;
   }

@@ -73,12 +73,12 @@ export default function Home() {
       tweenRef.current?.kill();
       tweenRef.current = gsap.to(el!, {
         scrollTop: idx * window.innerHeight,
-        duration: 0.7,
+        duration: 0.5,
         ease: 'power2.out',
         onComplete: () => {
           setTimeout(() => {
             busyRef.current = false;
-          }, 250);
+          }, 100);
         },
       });
     }
