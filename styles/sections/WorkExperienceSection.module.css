@@ -164,11 +164,12 @@
   padding-top: clamp(1rem, 2.5vh, 2rem);
 }
 
+/* cardHead layout gap using spacing variable */
 .cardHead {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 0.45rem;
+  gap: var(--space-3);
   min-width: 0;
 }
 
@@ -178,19 +179,6 @@
   color: var(--accent);
   font-family: monospace;
   letter-spacing: 0.04em;
-  white-space: nowrap;
-}
-
-.typeTag {
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.38);
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 0.1rem 0.38rem;
-  border-radius: 3px;
   white-space: nowrap;
 }
 
@@ -247,23 +235,12 @@
 }
 
 /* ── Tech stack ─────────────────────────────────── */
+/* stack layout gap and margin using spacing variables */
 .stack {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px;
-  margin-top: 0.2rem;
-}
-
-.tag {
-  font-size: 0.72rem;
-  font-weight: 600;
-  padding: 0.14rem 0.4rem;
-  border-radius: 3px;
-  background: rgba(249, 115, 22, 0.07);
-  color: rgba(249, 115, 22, 0.8);
-  border: 1px solid rgba(249, 115, 22, 0.16);
-  letter-spacing: 0.04em;
-  white-space: nowrap;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
 }
 
 /* ── Mobile (≤767px) ────────────────────────────── */

@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_IN',
-    url: 'https://cinematic-portfolio-sable.vercel.app',
+    url: 'https://portfolio-zeta-sooty-11.vercel.app',
     siteName: 'Sai Kiran Putta V.V.',
     title: 'Sai Kiran Putta V.V. | AI Engineer',
     description,
@@ -97,7 +97,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               '@context': 'https://schema.org',
               '@type': 'Person',
               name: 'Sai Kiran Putta V.V.',
-              url: 'https://cinematic-portfolio-sable.vercel.app',
+              url: 'https://portfolio-zeta-sooty-11.vercel.app',
               email: 'rokeysai13@gmail.com',
               jobTitle: 'AI Engineer & Full Stack Developer',
               sameAs: [

@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { gsap } from '@/lib/gsap';
 import profile from '@/data/profile.json';
 import styles from '@/styles/sections/WorkExperienceSection.module.css';
+import Badge from '@/components/ui/Badge';
 
 const EXPS = profile.experience;
 
@@ -134,7 +135,7 @@ export default function WorkExperienceSection() {
                 >
                   <div className={styles.cardHead}>
                     <span className={styles.period}>{exp.period} — {exp.periodEnd}</span>
-                    <span className={styles.typeTag}>{exp.type}</span>
+                    <Badge variant="glass" tone="neutral" size="sm">{exp.type}</Badge>
                     {exp.location && <span className={styles.location}>{exp.location}</span>}
                   </div>
                   <h2 className={styles.company}>{exp.company}</h2>
@@ -149,7 +150,7 @@ export default function WorkExperienceSection() {
                   </ul>
                   <div className={styles.stack}>
                     {exp.tech.map(t => (
-                      <span key={t} className={styles.tag}>{t}</span>
+                      <Badge key={t} variant="glass" tone="accent" size="sm">{t}</Badge>
                     ))}
                   </div>
                 </div>

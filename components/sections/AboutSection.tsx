@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { gsap } from '@/lib/gsap';
 import profile from '@/data/profile.json';
 import styles from '@/styles/sections/AboutSection.module.css';
+import Marquee from '@/components/ui/Marquee';
 
 const BIO = profile.bio;
 const WHO_ITEMS = profile.skills;
@@ -123,7 +124,7 @@ export default function AboutSection() {
               className={styles.photoImg}
             />
           </div>
-          <p className={styles.signature}>{profile.name.first}</p>
+          <span className={styles.signature}>// {profile.name.first.toLowerCase()}</span>
         </div>
 
         {/* Social Link List */}
@@ -147,16 +148,7 @@ export default function AboutSection() {
       <div ref={contentRef} className={styles.content}>
         <p className={styles.whoLabel}>Who I Am</p>
         
-        <div className={styles.marqueeWrap}>
-          <div className={styles.marqueeTrack}>
-            {[...WHO_ITEMS, ...WHO_ITEMS].map((item, i) => (
-              <span key={i} className={styles.marqueeItem}>
-                {item}
-                <span className={styles.marqueeDot}>·</span>
-              </span>
-            ))}
-          </div>
-        </div>
+        <Marquee items={WHO_ITEMS} speed={18} className={styles.marquee} />
 
         <div className={styles.bioWrap}>
           <p className={styles.bio}>

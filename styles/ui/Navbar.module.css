@@ -48,6 +48,11 @@
   opacity: 0.65;
 }
 
+.navLink:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
 .emailBtn {
   position: relative;
   overflow: hidden;
@@ -87,6 +92,11 @@
 
 .emailBtn:hover::after {
   transform: scaleX(1);
+}
+
+.emailBtn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }
 
 /* ── Dark section mode (Projects and onwards) ────── */
@@ -225,6 +235,11 @@
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   flex-shrink: 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.musicBtn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }
 
 .introMode .musicBtn {

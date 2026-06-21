@@ -1,14 +1,13 @@
-/* ─── Section ───────────────────────────────────────────── */
 .section {
   position: sticky;
   top: 0;
   height: 100vh;
   z-index: 2;
-  background: linear-gradient(
-    to bottom,
-    var(--hero-start) 0%,
-    var(--hero-mid) 55%,
-    var(--hero-end) 100%
+  background: radial-gradient(
+    circle at 82% 88%,
+    rgba(247, 147, 30, 0.14) 0%,
+    rgba(10, 10, 10, 0.95) 50%,
+    #050505 100%
   );
   overflow: hidden;
 }
@@ -27,7 +26,6 @@
 .photoImg {
   object-fit: contain;
   object-position: right bottom;
-  mix-blend-mode: multiply;
   transform: scale(1.05);
   transform-origin: right bottom;
 }
@@ -154,28 +152,9 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.6rem;
-  margin-top: 0.4rem;
-  max-width: 42vw;
-}
-
-.pill {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  background: rgba(255, 255, 255, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.75);
-  border-radius: 9999px;
-  padding: 0.65rem 1.5rem;
-  letter-spacing: 0.02em;
-  white-space: nowrap;
-  flex: unset;
-  text-align: center;
-}
-
-.pillDot {
-  display: none;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+  max-width: 45vw;
 }
 
 /* ─── View Projects Button ───────────────────────────────── */

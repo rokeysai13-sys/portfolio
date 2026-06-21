@@ -102,7 +102,10 @@
       "title": "Kirannn OS",
       "subtitle": "Agentic AI Operating System",
       "type": "Agentic AI",
-      "link": "https://github.com/rokeysai13-sys",
+      "cta": "Launch OS",
+      "link": "https://github.com/rokeysai13-sys/kirannn-os",
+      "secondaryCta": "View Architecture",
+      "secondaryLink": "https://github.com/rokeysai13-sys/kirannn-os#architecture",
       "image": "/assets/kirann os.jpg",
       "tech": ["Python", "LangChain", "Agentic AI", "RAG", "Memory Systems", "FastAPI"],
       "desc": "Next-generation agentic operating system combining AI agents, memory layers, custom toolsets, and autonomous workflows."
@@ -112,7 +115,10 @@
       "title": "ATS Resume Builder",
       "subtitle": "Full Stack Resume Platform",
       "type": "Full Stack",
-      "link": "https://github.com/rokeysai13-sys",
+      "cta": "Live Demo",
+      "link": "https://github.com/rokeysai13-sys/ats-resume-builder",
+      "secondaryCta": "Source Code",
+      "secondaryLink": "https://github.com/rokeysai13-sys/ats-resume-builder",
       "image": "/assets/ATS RESUME BUILDER.jpg",
       "tech": ["Next.js", "FastAPI", "OpenAI", "PDF Generation", "TypeScript", "React"],
       "desc": "Intelligent resume platform with AI-driven content optimization, resume scoring, PDF export, and modern responsive design."
@@ -122,7 +128,10 @@
       "title": "AI Council",
       "subtitle": "Multi-LLM Debate Platform",
       "type": "Multi-LLM",
-      "link": "https://github.com/rokeysai13-sys",
+      "cta": "Live Demo",
+      "link": "https://github.com/rokeysai13-sys/ai-council",
+      "secondaryCta": "Source Code",
+      "secondaryLink": "https://github.com/rokeysai13-sys/ai-council",
       "image": "/assets/ai council.jpg",
       "tech": ["Python", "Multi-LLM", "LangChain", "Ollama", "Reasoning", "FastAPI"],
       "desc": "A collaborative multi-model debate and reasoning platform that allows multiple LLMs to interact and solve complex problems."
@@ -134,7 +143,7 @@
       "title": "Kirannn OS",
       "platform": "GitHub",
       "year": "2025",
-      "link": "https://github.com/rokeysai13-sys",
+      "link": "https://github.com/rokeysai13-sys/kirannn-os",
       "desc": "Next-generation agentic operating system combining AI agents, memory layers, custom toolsets, and autonomous workflows."
     },
     {
@@ -142,7 +151,7 @@
       "title": "ATS Resume Builder",
       "platform": "GitHub",
       "year": "2025",
-      "link": "https://github.com/rokeysai13-sys",
+      "link": "https://github.com/rokeysai13-sys/ats-resume-builder",
       "desc": "Intelligent resume platform with AI-driven content optimization, resume scoring, PDF export, and modern responsive design."
     },
     {
@@ -150,7 +159,7 @@
       "title": "AI Council Debate",
       "platform": "GitHub",
       "year": "2025",
-      "link": "https://github.com/rokeysai13-sys",
+      "link": "https://github.com/rokeysai13-sys/ai-council",
       "desc": "A collaborative multi-model debate and reasoning platform that allows multiple LLMs to interact and solve complex problems."
     },
     {
@@ -158,14 +167,12 @@
       "title": "RAG & Agentic Research",
       "platform": "Research",
       "year": "2024",
-      "link": "https://github.com/rokeysai13-sys",
+      "link": "https://github.com/rokeysai13-sys/rag-agentic-research",
       "desc": "Independent research into vector databases, local model deployments with Ollama, retrieval workflows, and AI safety."
     }
   ],
   "socials": [
     { "label": "GitHub",    "href": "https://github.com/rokeysai13-sys" },
-    { "label": "LinkedIn",  "href": "https://www.linkedin.com/in/sai-kiran-putta-v-v-421497310" },
-    { "label": "Instagram", "href": "https://www.linkedin.com/in/sai-kiran-putta-v-v-421497310" },
-    { "label": "YouTube",   "href": "https://github.com/rokeysai13-sys" }
+    { "label": "LinkedIn",  "href": "https://www.linkedin.com/in/sai-kiran-putta-v-v-421497310" }
   ]
 }

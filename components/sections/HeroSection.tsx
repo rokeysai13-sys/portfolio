@@ -9,6 +9,7 @@ import profile from '@/data/profile.json';
 import content from '@/data/content.json';
 import styles from '@/styles/sections/HeroSection.module.css';
 
+import Badge from '@/components/ui/Badge';
 const HeroBackground = dynamic(() => import('@/components/three/HeroBackground'), { ssr: false });
 
 const GitHubIcon = () => (
@@ -44,7 +45,7 @@ const SOCIAL_ICON_MAP: Record<string, React.ComponentType> = {
   Instagram: InstagramIcon,
 };
 
-const SIDEBAR_LABELS = ['Instagram', 'GitHub', 'LinkedIn'];
+const SIDEBAR_LABELS = ['GitHub', 'LinkedIn'];
 
 function splitTagline(text: string, highlight: string) {
   if (!highlight) return [text];
@@ -177,13 +178,8 @@ export default function HeroSection() {
         </div>
 
         <div ref={pillsRef} className={styles.pills}>
-          {content.hero.pills.map((tag, i) => (
-            <Fragment key={tag}>
-              <span className={styles.pill}>{tag}</span>
-              {i < content.hero.pills.length - 1 && (
-                <span className={styles.pillDot} aria-hidden="true" />
-              )}
-            </Fragment>
+          {content.hero.pills.map((tag) => (
+            <Badge key={tag} size="lg" variant="glass" tone="neutral">{tag}</Badge>
           ))}
         </div>
 

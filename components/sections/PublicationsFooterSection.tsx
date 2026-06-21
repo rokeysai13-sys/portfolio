@@ -71,7 +71,7 @@ const MOBILE_SOCIAL_ICONS: Record<string, React.ReactNode> = {
   Instagram: <InstagramIcon size={20} />,
 };
 
-const HERO_SOCIAL_LABELS = ['GitHub', 'LinkedIn', 'Instagram'];
+const HERO_SOCIAL_LABELS = ['GitHub', 'LinkedIn'];
 
 const VID_VERT = `
   varying vec2 vUv;
@@ -434,7 +434,7 @@ export default function PublicationsFooterSection() {
         {/* Mobile footer backup background */}
         <div className={styles.mobileFooterBg}>
           <Image
-            src="/assets/work-experience.webp"
+            src="/assets/mobile-footer.webp"
             alt=""
             fill
             quality={100}
@@ -445,20 +445,6 @@ export default function PublicationsFooterSection() {
         </div>
 
         <div className={styles.mobileDarkOverlay} aria-hidden />
-
-        {/* Shrinking floating image */}
-        <div ref={imageWrapRef} className={styles.imageWrap}>
-          <Image
-            src="/assets/sai-footer.jpeg"
-            alt=""
-            fill
-            quality={100}
-            className={styles.imageEl}
-            sizes="(max-width: 767px) 100vw, 50vw"
-            priority={false}
-          />
-          <div ref={imageOverlayRef} className={styles.imageOverlay} />
-        </div>
 
         {/* Publications List */}
         <div ref={pubContentRef} className={styles.pubContent}>
@@ -540,21 +526,18 @@ export default function PublicationsFooterSection() {
 
         {/* Footer phase layout */}
         <div ref={footerContentRef} className={styles.footerContent} id="contact">
-          {/* Mobile footer brand info */}
+          {/* Mobile footer layout */}
           <div className={styles.mobileLayout}>
-            <div className={styles.mobileBrand}>
-              <span className={styles.mobileRoleDot} />
-              <span className={styles.mobileRoleText}>{profile.roles.short.toUpperCase()}</span>
-            </div>
+            <span className={styles.mobileRoleText}>LET&apos;S BUILD SOMETHING GREAT</span>
             <h2 className={styles.mobileName}>
-              {profile.name.first.toUpperCase()}
+              LET&apos;S WORK
               <br />
-              <span className={styles.mobileNameGhost}>{profile.name.last.toUpperCase()}</span>
+              <span className={styles.mobileNameGhost}>TOGETHER.</span>
             </h2>
-            <p className={styles.mobileDesc}>{profile.description}</p>
+            <p className={styles.mobileDesc}>{content.hero.freelanceNote}</p>
             <div className={styles.mobileCtas}>
               <a href={`mailto:${profile.email}`} className={styles.mobileTalkBtn}>
-                Let&apos;s talk <ArrowIcon />
+                Get in touch <ArrowIcon />
               </a>
             </div>
             <div className={styles.mobileSocialRow}>
@@ -571,10 +554,6 @@ export default function PublicationsFooterSection() {
                 );
               })}
             </div>
-            <div className={styles.mobileScrollHint} aria-hidden>
-              <ChevronDownIcon size={18} />
-              <span className={styles.mobileScrollText}>Scroll to explore</span>
-            </div>
           </div>
 
           <div className={styles.mainGrid}>
@@ -584,18 +563,17 @@ export default function PublicationsFooterSection() {
                   <span className={styles.greetDot} />
                   {greeting}
                 </p>
-                <p className={styles.roleLabel}>{profile.roles.short}</p>
                 <h2 className={styles.nameHeading}>
-                  {profile.name.first}
+                  LET&apos;S WORK
                   <br />
-                  <span className={styles.nameGhost}>{profile.name.last}</span>
+                  <span className={styles.nameGhost}>TOGETHER.</span>
                 </h2>
               </div>
 
               <div className={styles.footerInfo}>
-                <p className={styles.footerDescription}>{profile.description}</p>
+                <p className={styles.footerDescription}>{content.hero.freelanceNote}</p>
                 <div className={styles.footerLinks}>
-                  {profile.socials.slice(0, 4).map((s, i) => (
+                  {profile.socials.map((s, i) => (
                     <span key={s.label} className={styles.footerLinkWrap}>
                       {i > 0 && <span className={styles.footerPipe}>|</span>}
                       <a
@@ -628,14 +606,10 @@ export default function PublicationsFooterSection() {
                   <span className={styles.ctaAccent}>{content.footer.ctaAccent}</span>
                 </p>
                 <a href={`mailto:${profile.email}`} className={styles.talkBtn}>
-                  Let&apos;s talk
+                  Send Email
                 </a>
               </div>
             </div>
-          </div>
-
-          <div ref={bigNameRef} className={styles.signatureWrap}>
-            <h2 className={styles.signatureText}>{profile.name.full.toUpperCase()}</h2>
           </div>
 
           <div ref={bottomBarRef} className={styles.bottomBar}>

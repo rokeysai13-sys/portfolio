@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { gsap, ScrollTrigger } from '@/lib/gsap';
 import profile from '@/data/profile.json';
 import styles from '@/styles/sections/ProjectsSection.module.css';
+import Badge from '@/components/ui/Badge';
 
 const PROJECTS = profile.projects;
 
@@ -72,8 +73,8 @@ export default function ProjectsSection() {
         const title = next.querySelector(`.${styles.title}`);
         const sub = next.querySelector(`.${styles.subtitle}`);
         const desc = next.querySelector(`.${styles.desc}`);
-        const tags = next.querySelectorAll(`.${styles.tag}`);
-        const btn = next.querySelector(`.${styles.liveBtn}`);
+        const tags = next.querySelectorAll(`.tech-badge-animate`);
+        const cta = next.querySelector(`.${styles.ctaGroup}`);
 
         if (meta)  tl.fromTo(meta,  { x: -10, opacity: 0 }, { x: 0, opacity: 1, duration: 0.25, ease: 'power2.out' }, i + 0.45);
         if (title) tl.fromTo(title, { opacity: 0, y: 20 },  { opacity: 1, y: 0, duration: 0.45, ease: 'expo.out'   }, i + 0.48);
@@ -82,7 +83,7 @@ export default function ProjectsSection() {
         if (tags.length) {
           tl.fromTo(tags,  { y: 6, opacity: 0 },  { y: 0, opacity: 1, duration: 0.25, ease: 'power2.out', stagger: 0.03 }, i + 0.65);
         }
-        if (btn)   tl.fromTo(btn,   { y: 8, opacity: 0 },  { y: 0, opacity: 1, duration: 0.30, ease: 'power2.out' }, i + 0.72);
+        if (cta)   tl.fromTo(cta,   { y: 8, opacity: 0 },  { y: 0, opacity: 1, duration: 0.30, ease: 'power2.out' }, i + 0.72);
       }
     }
 
@@ -135,15 +136,6 @@ export default function ProjectsSection() {
                 ref={el => { bgRefs.current[i] = el; }}
                 className={styles.slideBg}
               >
-                <Image
-                  src={proj.image}
-                  alt={proj.title}
-                  fill
-                  quality={100}
-                  sizes="100vw"
-                  className={styles.slideImg}
-                  priority={i === 0}
-                />
                 <div className={styles.slideOverlayLeft}   aria-hidden />
                 <div className={styles.slideOverlayBottom} aria-hidden />
                 <div className={styles.slideVignette}      aria-hidden />
@@ -155,31 +147,64 @@ export default function ProjectsSection() {
                 ref={el => { contentRefs.current[i] = el; }}
                 className={styles.slideContent}
               >
+                {/* Left Column: All details and typography */}
                 <div className={styles.slideLeft}>
                   <div className={styles.meta}>
-                    <span className={styles.typeTag}>{proj.type}</span>
+                    <Badge variant="glass" tone="accent" size="md">{proj.type}</Badge>
                   </div>
+                  
                   <h2 className={styles.title}>{proj.title}</h2>
                   <p  className={styles.subtitle}>{proj.subtitle}</p>
-                  <a
-                    href={proj.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.liveBtn}
-                  >
-                    <span>Live Demo</span>
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden style={{ marginLeft: '4px' }}>
-                      <path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </a>
-                </div>
-
-                <div className={styles.slideRight}>
                   <p className={styles.desc}>{proj.desc}</p>
+                  
                   <div className={styles.stack}>
                     {proj.tech.map(t => (
-                      <span key={t} className={styles.tag}>{t}</span>
+                      <Badge key={t} variant="glass" tone="neutral" size="sm" className="tech-badge-animate">{t}</Badge>
                     ))}
+                  </div>
+
+                  <div className={styles.ctaGroup}>
+                    {proj.link && (
+                      <a
+                        href={proj.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.primaryBtn}
+                      >
+                        <span>{proj.cta || 'Live Demo'}</span>
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden style={{ marginLeft: '4px' }}>
+                          <path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </a>
+                    )}
+                    {proj.secondaryLink && (
+                      <a
+                        href={proj.secondaryLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.secondaryBtn}
+                      >
+                        <span>{proj.secondaryCta || 'Codebase'}</span>
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden style={{ marginLeft: '4px' }}>
+                          <path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </a>
+                    )}
+                  </div>
+                </div>
+
+                {/* Right Column: Floating Mockup Card */}
+                <div className={styles.slideRight}>
+                  <div className={styles.mockupFrame}>
+                    <Image
+                      src={proj.image}
+                      alt={proj.title}
+                      fill
+                      quality={100}
+                      sizes="(min-width: 768px) 50vw, 100vw"
+                      className={styles.slideImg}
+                      priority={i === 0}
+                    />
                   </div>
                 </div>
               </div>
